@@ -1,0 +1,53 @@
+.inicio-contenido {
+  padding: 2rem 1rem;      /* reducir padding general */
+  margin-top: 4rem;        /* espacio para header */
+  margin-left: 350px;
+  color: #333;
+}
+
+.inicio-contenido h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #050000;
+}
+
+.graficos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;             /* menos separación si hace falta */
+  margin-top: 1rem;        /* ajustado a menor espacio */
+}
+
+.grafico-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;           /* corregido flex en lugar de auto */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto;            /* adaptativo a contenido */
+}
+
+.grafico-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+  color: #444;
+}
+
+.grafico-chart {
+  width: 100%;
+  height: 350px;           /* altura fija razonable */
+}
+
+.chartjs-render-monitor {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.grafico-card p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: #666;
+}

@@ -1,0 +1,284 @@
+/* src/components/ProfesoresCRUD.css */
+
+.profesores-crud {
+  max-width: 1000px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+  color: #f1f1f1;
+}
+
+/* Barra de acciones: General, Buscar */
+.actions-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+.actions-bar input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #2e2e2e;
+  color: #f1f1f1;
+}
+
+.actions-bar button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.btn-general {
+  background-color: #17a2b8;
+  color: #fff;
+}
+.actions-bar button:hover {
+  opacity: 0.9;
+}
+
+/* Tablas generales y de pagos */
+.tabla-general,
+.tabla-pagos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+.tabla-general th,
+.tabla-general td,
+.tabla-pagos th,
+.tabla-pagos td {
+  padding: 0.8rem;
+  border: 1px solid #444;
+  text-align: left;
+}
+.tabla-general thead,
+.tabla-pagos thead {
+  background-color: #007bff;
+}
+.tabla-general thead th,
+.tabla-pagos thead th {
+  color: #fff;
+}
+.tabla-general tbody tr:nth-child(even),
+.tabla-pagos tbody tr:nth-child(even) {
+  background-color: #2e2e2e;
+}
+.tabla-general tbody tr:hover,
+.tabla-pagos tbody tr:hover {
+  background-color: #3e3e3e;
+}
+
+/* Formulario de CRUD */
+.form-crud {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form-crud h3 {
+  grid-column: 1 / -1;
+  color: #fff;
+}
+.form-crud input,
+.form-crud select,
+.form-crud label {
+  background: #2e2e2e;
+  color: #f1f1f1;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 0.6rem;
+  width: 100%;
+}
+.form-crud label {
+  display: flex;
+  align-items: center;
+}
+.form-crud input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.form-crud .crud-form-buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 1rem;
+}
+
+.form-crud .btn-create {
+  background-color: #007bff;
+  color: #fff;
+}
+.form-crud .btn-update {
+  background-color: #007bff;
+  color: #212529;
+}
+.form-crud .btn-cancel {
+  background-color: #dc3545;
+  color: #fff;
+}
+.form-crud button:hover {
+  opacity: 0.9;
+}
+
+/* Detalle de un docente */
+.detalle-docente {
+  background: #2e2e2e;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+.detalle-docente h3 {
+  margin-top: 0;
+  color: #fff;
+}
+.detalle-docente p {
+  margin: 0.5rem 0;
+}
+.detalle-docente h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+/* Botón de eliminar en detalle */
+.detalle-docente .crud-buttons {
+  margin-top: 1rem;
+}
+.detalle-docente .crud-buttons button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.detalle-docente .crud-buttons button:hover {
+  opacity: 0.9;
+}
+.btn-export {
+  background-color: #007bff;  /* verde suave */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-export:hover {
+  background-color: #007bff;
+}
+.btn-crear {
+  margin-top: 1rem;
+  background: #007bff;  
+  color: #fff;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.tabla-general-wrapper {
+  overflow-x: auto;
+}
+
+.tabla-general td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+/* Paginación visual */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.paginacion button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.paginacion button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+.tabla-general-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.tabla-general {
+  table-layout: auto;
+  width: 100%;
+  word-break: break-word;
+}
+
+.tabla-general td, .tabla-general th {
+  white-space: normal !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 220px; /* ajustable según tu diseño */
+}
+.tabla-scroll {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.tabla-general {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+  word-wrap: break-word;
+}
+
+.tabla-general td,
+.tabla-general th {
+  white-space: normal !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 200px;
+}
+.panel-negro {
+  background-color: #1c1c1c;
+  padding: 5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  color: #f5f6fa;
+}
+
+/* Opcional: para que tabla no se salga */
+.tabla-general {
+  overflow-x: auto;
+  width: 100%;
+  display: block;
+}
+.profesor-wrapper {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+

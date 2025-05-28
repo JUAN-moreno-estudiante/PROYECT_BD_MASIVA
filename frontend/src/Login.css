@@ -1,0 +1,127 @@
+/* Fondo con gradiente */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* ✅ evita tapar el body::before */
+  position: relative;
+  z-index: 1;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(0, 64, 255, 0.45), rgba(30, 60, 150, 0.45)),
+    url('./assets/logot2.png') center center / cover no-repeat;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+
+
+
+  
+  /* Caja del login */
+  .login-box {
+    background: rgb(1, 24, 176);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+  }
+  
+  /* Avatar */
+  .avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgb(2, 95, 245);
+    padding: 1px;
+    margin-bottom: 5px;
+  }
+  
+  /* Inputs */
+  .input-group {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .input-group .icon {
+    margin-right: 10px;
+  }
+  
+  .input-group input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Opciones */
+  .options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .options a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .options a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Botón */
+  button {
+    width: 100%;
+    padding: 10px;
+    background: rgb(250, 248, 248);
+    border: none;
+    border-radius: 5px;
+    color: #1a1818;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background: #f0f0f0;
+  }
+  .avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

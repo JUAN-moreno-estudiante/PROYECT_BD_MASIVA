@@ -1,0 +1,83 @@
+/* 1) RESET GLOBAL */
+/* MainLayout.css */
+
+.app {
+  margin-top: 60px; /* para dejar espacio al header fijo */
+}
+
+.main-layout {
+  display: flex;
+}
+
+.content-area {
+  flex: 1;
+  padding: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  background-color: #0000ff; /* fondo oscuro base */
+  color: #f1f1f1;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden; /* evita doble scroll */
+}
+
+/* 2) VARIABLES CSS */
+:root {
+  --header-height: 64px;     /* ajusta a tu header real */
+  --sidebar-width: 240px;    /* ajusta al ancho real de tu sidebar */
+}
+
+/* 3) HEADER FIJO */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: #6200ee; /* color del header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  z-index: 1000;
+}
+
+/* 4) CONTENEDOR PRINCIPAL */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* 5) LAYOUT HORIZONTAL BAJO EL HEADER */
+.main-layout {
+  display: flex;
+  flex: 1;
+  margin-top: var(--header-height); /* deja espacio para el header fijo */
+  height: calc(100vh - var(--header-height));
+}
+
+/* 6) SIDEBAR */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: #1f2937;
+  color: #f1f1f1;
+  flex-shrink: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* 7) ÁREA DE CONTENIDO */
+.content-area {
+  flex: 1;
+  padding: 1.5rem;
+  
+  overflow-y: auto;
+  height: 100%;
+}

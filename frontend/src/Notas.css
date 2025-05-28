@@ -1,0 +1,214 @@
+/* CONTENEDOR PRINCIPAL */
+.notas-contenido {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+}
+
+/* BARRA DE ACCIONES */
+.campo-busqueda {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.campo-busqueda input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #2e2e2e;
+  color: #f1f1f1;
+}
+
+/* ERRORES */
+.error {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+/* FORMULARIOS CRUD */
+.form-crud {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px #00000060;
+}
+
+.form-crud h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-left: 4px solid #28a745;
+  padding-left: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+  flex: 1;
+  padding: 8px;
+  background-color: #2c2c2c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+select {
+  color: white;
+}
+
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* BOTONES */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-search {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-create {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn-update {
+  background-color: #007bff;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn-cancel {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn-export {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-export:hover {
+  background-color: #007bff;
+}
+
+/* GRUPOS DE BOTONES */
+.crud-form-buttons,
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+/* INFO ESTUDIANTE */
+.student-info {
+  background: #2e2e2e;
+  padding: 1.5rem;
+  border-radius: 6px;
+  color: #f1f1f1;
+}
+
+.student-info h2 {
+  margin-top: 0;
+}
+
+.student-info h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.student-info ul {
+  list-style: disc inside;
+}
+.panel-negro {
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: #f1f1f1;
+  margin-top: 1rem;
+}
+.estudiantes-panel {
+  max-width: 1100px;            /* Limita el ancho máximo */
+  margin: 2rem auto;            /* Centra horizontalmente */
+  padding: 1rem;
+}
+
+.panel-negro {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  color: #f1f1f1;
+}
+.tabla-general {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+  }
+}
